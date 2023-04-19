@@ -1,16 +1,14 @@
 import streamlit as st
 
-st.title("Largest Number")
+st.title("Find the Largest Number")
 
-# Create the first text box
-text_1 = float(st.text_input("Enter first number"))
+# Input three numbers
+num_1 = st.number_input("Enter the first number")
+num_2 = st.number_input("Enter the second number")
+num_3 = st.number_input("Enter the third number")
 
-# Create the second text box
-text_2 = float(st.text_input("Enter second number"))
+# Find the largest number
+largest = max(num_1, num_2, num_3)
 
-# Create the third text box
-text_3 = float(st.text_input("Enter third number"))
-
-# Display the contents of the text boxes
-st.write("Sun", text_1+text_2+text_3)
-
+# Display the result
+st.write("The largest number is:", largest)
